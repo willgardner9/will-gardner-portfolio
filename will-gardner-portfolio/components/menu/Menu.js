@@ -1,6 +1,7 @@
 import MailButton from "./MailButton";
 import GitHubButton from "./GitHubButton";
 import AnchorButton from "./AnchorButton";
+import LinkedInButton from "./LinkedInButton";
 
 export default function Menu() {
   return (
@@ -10,6 +11,9 @@ export default function Menu() {
       </AnchorButton>
       <AnchorButton destination="https://github.com/willgardner9">
         <GitHubButton/>
+      </AnchorButton>
+      <AnchorButton destination="https://www.linkedin.com/in/will-gardner9/">
+        <LinkedInButton/>
       </AnchorButton>
     </section>
   )

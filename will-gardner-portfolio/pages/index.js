@@ -19,11 +19,13 @@ export default function Home() {
         <Divider text="Projects" />
         <Project
           projectNameText="Testably"
-          projectDescription="Testably.co is a micro-SaaS product providing easy-to-use A/B testing tools for startups and small businesses. I developed Testably.co after growing frustrated in my day job about the lack of simple, affordable A/B testing solutions available for startups. Testably.co is built with Express and MongoDB on the backend and Nuxt.js on the frontend."
+          projectImage="testably"
+          projectDescription="Testably is a micro-SaaS product providing easy-to-use A/B testing tools for startups and small businesses. I developed Testably after growing frustrated in my day job about the lack of simple, affordable A/B testing solutions available for startups. Testably is built with Express and MongoDB on the backend and Vue.js with Nuxt.js on the frontend."
           viewLiveButtonDestination="https://testably.co/"
-          viewOnGitHubButtonDestination="https://github.com/willgardner9/testably.co-back-end"
+          viewOnGitHubButtonDestination="https://github.com/willgardner9?tab=repositories&q=testably&type=&language=&sort="
           readCaseStudyDestination="/testably"
         />
+        <Divider text="Technologies" />
       </Wrapper>
     </div>
   )
