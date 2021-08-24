@@ -2,8 +2,12 @@ import MailButton from "./MailButton";
 import GitHubButton from "./GitHubButton";
 import AnchorButton from "./AnchorButton";
 import LinkedInButton from "./LinkedInButton";
+import Button from "./Button";
+import ThemeButton from "./ThemeButton";
+import { useTheme } from 'next-themes'
 
 export default function Menu() {
+  const { theme, setTheme } = useTheme()
   return (
     <section className="w-full flex justify-end mt-8">
       <AnchorButton destination="mailto:willgardner9@gmail.com">
@@ -15,6 +19,9 @@ export default function Menu() {
       <AnchorButton destination="https://www.linkedin.com/in/will-gardner9/">
         <LinkedInButton/>
       </AnchorButton>
+      <Button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        <ThemeButton />
+      </Button>
     </section>
   )
 }

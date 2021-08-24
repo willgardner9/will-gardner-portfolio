@@ -1,4 +1,4 @@
-export default function Text() {
+export default function HeaderText() {
   return (
     <section className="mt-8">
       <h1 className="font-karla text-3xl font-light">Hi, I'm Will Gardner.</h1>

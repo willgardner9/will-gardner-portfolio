@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import Wrapper from '../components/global/Wrapper'
 import Divider from '../components/global/Divider'
-import Text from '../components/header/Text'
+import Text from '../components/global/Text'
+import HeaderText from '../components/header/HeaderText'
 import Menu from '../components/menu/Menu'
 import Project from '../components/project/Project'
+import Technologies from '../components/technologies/Technologies'
+import GhostButton from '../components/project/GhostButton'
+import Contact from '../components/contact/Contact'
 
 export default function Home() {
   return (
@@ -15,8 +19,9 @@ export default function Home() {
       </Head>
       <Wrapper>
         <Menu />
-        <Text />
+        <HeaderText />
         <Divider text="Projects" />
+        <Text text="I love building and deploying full stack applications to create functional, user-focused tools and learn new technologies. Please see a selection of web apps I have built below. You can view each project deployed live, review the open-source code on GitHub, or read the case study to learn more about the project." />
         <Project
           projectNameText="Testably"
           projectImage="testably"
@@ -26,6 +31,10 @@ export default function Home() {
           readCaseStudyDestination="/testably"
         />
         <Divider text="Technologies" />
+        <Text text="This is a selection of languages, frameworks, and APIs that I am comfortable with and have experience using. I love learning new technologies, too  - check out my learning roadmap at the end of the section to see what I’m planning on picking up next!" />
+        <Technologies />
+        <Divider text="Contact" />
+        <Contact />
       </Wrapper>
     </div>
   )

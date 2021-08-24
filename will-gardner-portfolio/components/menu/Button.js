@@ -1,6 +1,7 @@
-const AnchorButton = ({ children, destination }) => {
+const Button = ({ children, onClick }) => {
   return (
-    <a href={ destination } target="_blank"
+    <button
+      onClick={onClick}
       className="
       rounded-lg p-2 transition-all mx-2 last:mr-0 outline-none 
       bg-gray-200 text-gray-400 
@@ -14,8 +15,8 @@ const AnchorButton = ({ children, destination }) => {
       dark:active:ring-gray-500
       ">
       { children }
-    </a>
+    </button>
   )
 }
 
-module.exports = AnchorButton
+module.exports = Button

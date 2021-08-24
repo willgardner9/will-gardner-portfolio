@@ -1,12 +1,16 @@
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
       'karla': ['Karla'],
     },
-    extend: {},
+    extend: {
+      width: {
+        '95vw': '95vw',
+      }
+    },
   },
   variants: {
     extend: {},
