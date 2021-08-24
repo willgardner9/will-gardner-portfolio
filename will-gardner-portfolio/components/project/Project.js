@@ -16,7 +16,7 @@ const Project = ({ projectNameText, projectDescription, viewLiveButtonDestinatio
           <ProjectDescription projectDescription={projectDescription} />
         </div>
       </div>
-      <div className="mt-8 flex flex-col sm:flex-row lg:justify-end">
+      <div className="mt-4 flex flex-col sm:flex-row lg:justify-end">
           <GhostButton buttonText="View live" buttonDestination={viewLiveButtonDestination} />
           <GhostButton buttonText="View on GitHub" buttonDestination={viewOnGitHubButtonDestination} />
           <PrimaryButton buttonText="Read case study" buttonDestination={readCaseStudyDestination} />
