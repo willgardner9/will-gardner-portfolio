@@ -8,6 +8,7 @@ import ParagraphTitle from '../components/case-studies/paragraphTitle'
 import Caption from '../components/case-studies/Caption'
 import ParagraphText from '../components/case-studies/ParagraphText'
 import { CodeBlock, monokai } from 'react-code-blocks';
+import ScrollToTop from '../components/global/ScrollToTop'
 
 export default function Home() {
   const overviewItems = [
@@ -93,9 +94,9 @@ export default function Home() {
         <ParagraphText paragraphText="As with any SaaS app, authentication, authorisation, and general user management were one of the first design choices that needed to be made. To keep costs low and prevent vendor lock-in, I opted to handle authentication, authorisation, and user management myself. As I was building a completely decoupled front end and back end, the popular JWT-based refresh token/access token authentication pattern, which uses long-life HTTP-only cookie refresh tokens to generate short-life access tokens that allow access to the API was a good choice." />
         <ParagraphText paragraphText="This authentication pattern has numerous explanatory resources from Auth0 and Hasura that detail the implementation and security considerations of using refresh tokens and access tokens, so I felt confident opting for this authentication pattern." />
         <ParagraphText paragraphText="As I used Vue.js with Nuxt.js on the front end, I initially planned to use the nuxt/auth module to handle client-side authentication. For whatever reason, the nuxt/auth module had issues receiving HTTP-only cookies and then sending requests with HTTP-only cookies. I struggled with the sparse documentation and, short of digging through the source code, there didn't seem to be an expedient solution." />
-        <ParagraphText paragraphText="To get around this, I wrote my own lightweight auth middleware that uses Vuex state and Axios (without the nuxt/auth wrapper). Each page of the Nuxt.js app has this auth middleware loaded into it that handles protected routes, silent logins, and refreshing tokens." />
+        <ParagraphText paragraphText="To get around this, I wrote my own lightweight auth middlewares that use Vuex state and Axios (without the nuxt/auth wrapper). Each page of the Nuxt.js app has this auth middleware loaded into it that handles protected routes, silent logins, and refreshing tokens." />
         <Caption captionText="Auth code middleware from refreshOnLoad.js that checks if a user has logged in before and attempts a silent login" />
-        <div style={{ fontFamily: 'monospace' }}>
+        <div style={{ fontFamily: 'monospace' }} className="mb-4">
           <CodeBlock
             text={ authCodeBlock }
             language="javascript"
@@ -109,7 +110,7 @@ export default function Home() {
         <ParagraphText paragraphText="However, what I failed to consider when making these choices was the need for some public routes on my API - routes that can accept requests from other origins. This is necessary for the client-side snippet that Testably users load onto their site to work properly. Better planning could have foreseen this issue and ensured I only utilised the CORS middleware at a Router or Controller level, enabling me to run CORS-protected and non CORS-protected routes from the same Node.js app." />
         <ParagraphText paragraphText="In the end, to avoid a fairly large-scale overhaul of my Node.js app, I opted to spin up a completely separately Node.js app for my public routes. This works well but adds to my overheads and is not an optimal solution." />
         <Caption captionText="Globally enabled CORS middleware. If I was building Testably from the ground up, I would enable this route by route or controller by controller" />
-        <div style={{ fontFamily: 'monospace' }}>
+        <div style={{ fontFamily: 'monospace' }} className="mb-4">
           <CodeBlock
             text={ corsCodeBlock }
             language="javascript"
@@ -118,6 +119,7 @@ export default function Home() {
         </div>
         <ParagraphText paragraphText="Lesson learned: properly plan out all API routes and design considerations before writing a line of code!" />
       </Wrapper>
+      <ScrollToTop />
     </div>
   )
 }

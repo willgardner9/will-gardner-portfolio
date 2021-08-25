@@ -1,7 +1,7 @@
 const GhostButton = ({ buttonText, buttonDestination }) => {
   return (
     <a href={ buttonDestination } target="_blank"
-      className="font-karla text-lg font-light flex items-center outline-none rounded-lg h-14 p-3 mr-4 max-w-max focus:ring-4 ring-gray-300 active:ring-4 active:ring-gray-400 bg-gray-200 hover:bg-gray-300 first:mt-0 mt-4 sm:mt-0       dark:bg-gray-700
+      className="font-karla text-lg font-light flex items-center outline-none rounded-lg h-14 p-3 mr-4 max-w-max focus:ring-4 ring-gray-300 active:ring-4 active:ring-gray-400 bg-gray-200 hover:bg-gray-300 first:mt-0 mt-4 sm:mt-0 dark:bg-gray-700
       dark:hover:bg-gray-600
       dark:hover:text-gray-300
       dark:ring-gray-600

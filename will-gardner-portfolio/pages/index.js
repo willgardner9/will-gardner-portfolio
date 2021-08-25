@@ -8,6 +8,7 @@ import Project from '../components/project/Project'
 import Technologies from '../components/technologies/Technologies'
 import GhostButton from '../components/project/GhostButton'
 import Contact from '../components/contact/Contact'
+import ScrollToTop from '../components/global/ScrollToTop'
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Divider text="Contact" />
         <Contact />
       </Wrapper>
+      <ScrollToTop />
     </div>
   )
 }
