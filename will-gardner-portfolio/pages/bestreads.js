@@ -78,7 +78,7 @@ if (!supabase.auth.currentUser) return null;`;
       </Head>
       <Wrapper>
         <Menu />
-        <Title titleText="bestreads" />
+        <Title titleText="Bestreads" />
         <div className="mt-10 shadow-lg flex max-w-min justify-center rounded">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=Ufn0FVb5Wcc"
@@ -90,7 +90,7 @@ if (!supabase.auth.currentUser) return null;`;
         <Overview overviewItems={overviewItems} />
         <Heading headingText="Technical challenges, solutions, and design decisions" />
         <ParagraphTitle paragraphTitle="Supabase authentication and authorisation" />
-        <ParagraphText paragraphText="The client-side SDK provided by supabase should the back end functionality for user authentication and authorisation. However, the choice of how you actually implement authentication in the client is up to you. As this project was built for my partner and I, using magic links was the quickest and easiest solution." />
+        <ParagraphText paragraphText="The client-side SDK provided by supabase handles the back end functionality for user authentication and authorisation. However, the choice of how you actually implement authentication in the client is up to you. As this project was built for my partner and I, using magic links was the quickest and easiest solution." />
         <ParagraphText paragraphText="Implementing magic links in my Next.js application was easy. Upon authentication, supabase provides access to a global supabase.auth variable that enables authentication and authorisation. Because this app has relatively few pages, I simply set up a useEffect hook to redirect unauthenticated users to the auth page, which works well for this use case. If you were building a larger scale application, a more robust server-side authentication solution using getServerSideProps would be preferable. At the moment, the supabase SDK has some issues with extracting refresh and access token cookies using getServerSideProps, but I will look to implement this server-side auth method when it's available." />
         <Caption captionText="Simple auth and magic links with supabase & auth code useEffect hook using supabase client-side SDK" />
         <div style={{fontFamily: "monospace"}} className="mb-8">
@@ -101,7 +101,7 @@ if (!supabase.auth.currentUser) return null;`;
           />
         </div>
         <ParagraphTitle paragraphTitle="Book Object Models and Component Props" />
-        <ParagraphText paragraphText="Bestreads uses the Google Books API to search for books and get information about their titles, authors, publication dates, and so on. The Google Books API serves JSON data in the following way: if a value doesn't exist in a given key: value pair for a given book, that key will be omitted from the JSON data that is served, meaning the book object models varies from book to book depending on the data available. This could cause difficulities When passing a book object as props to a component: if the Google Books API doesn't have information about a book's author, for example, then that prop will be non-existent, and no data will be rendered in the UI. I decided to tackle this issue on the client side by omitting results that don't conform to a complete object data model." />
+        <ParagraphText paragraphText="Bestreads uses the Google Books API to search for books and get information about their titles, authors, publication dates, and so on. The Google Books API serves JSON data in the following way: if a value doesn't exist in a given key: value pair for a given book, that key will be omitted from the JSON data that is served, meaning the book object models varies from book to book depending on the data available. This could cause difficulties When passing a book object as props to a component: if the Google Books API doesn't have information about a book's author, for example, then that prop will be non-existent, and no data will be rendered in the UI. I decided to tackle this issue on the client side by omitting results that don't conform to a complete object data model." />
         <Caption captionText="Discards books with incomplete information" />
         <div style={{fontFamily: "monospace"}} className="mb-8">
           <CodeBlock
