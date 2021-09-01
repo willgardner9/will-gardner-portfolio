@@ -1,14 +1,13 @@
-import Head from 'next/head'
-import Wrapper from '../components/global/Wrapper'
-import Divider from '../components/global/Divider'
-import Text from '../components/global/Text'
-import HeaderText from '../components/header/HeaderText'
-import Menu from '../components/menu/Menu'
-import Project from '../components/project/Project'
-import Technologies from '../components/technologies/Technologies'
-import GhostButton from '../components/project/GhostButton'
-import Contact from '../components/contact/Contact'
-import ScrollToTop from '../components/global/ScrollToTop'
+import Head from "next/head";
+import Wrapper from "../components/global/Wrapper";
+import Divider from "../components/global/Divider";
+import Text from "../components/global/Text";
+import HeaderText from "../components/header/HeaderText";
+import Menu from "../components/menu/Menu";
+import Project from "../components/project/Project";
+import Technologies from "../components/technologies/Technologies";
+import Contact from "../components/contact/Contact";
+import ScrollToTop from "../components/global/ScrollToTop";
 
 export default function Home() {
   return (
@@ -16,13 +15,16 @@ export default function Home() {
       <Head>
         <title>Will Gardner - Full Stack Developer</title>
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;500&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;500&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Wrapper>
         <Menu />
         <HeaderText />
         <Divider text="Projects" />
-        <Text text="I love building and deploying full stack applications to create functional, user-focused tools and learn new technologies. You can view each project deployed live, review the open source code on GitHub, or watch a demo and read the case study to learn more about the project." />
+        <Text text="I love building and deploying full-stack applications to create functional, user-focused tools and learn new technologies. You can view each project deployed live, review the open-source code on GitHub, or watch a demo and read the case study to learn more about the project." />
         <Project
           projectNameText="Testably"
           projectImage="testably"
@@ -32,9 +34,9 @@ export default function Home() {
           readCaseStudyDestination="/testably"
         />
         <Project
-          projectNameText="bestreads"
+          projectNameText="Bestreads"
           projectImage="bestreads"
-          projectDescription="Bestreads is a web app that allows you to create a private list of books you want to read, books you have read, and set an annual reading challenge. I created it for my partner and I to use together - goodreads without the public social media. Bestreads is a React app with Next.js on the front end and supabase, an open source PaaS, on the back end."
+          projectDescription="Bestreads is a web app that allows you to create a private list of books you want to read, books you have read, and set an annual reading challenge. I created it for my partner and I to use together - goodreads without the public social media. Bestreads is a React app with Next.js on the front end and supabase, an open-source PaaS, on the back end."
           viewLiveButtonDestination="https://bestreads.vercel.app/"
           viewOnGitHubButtonDestination="https://github.com/willgardner9/bestreads"
           readCaseStudyDestination="/bestreads"
@@ -47,5 +49,5 @@ export default function Home() {
       </Wrapper>
       <ScrollToTop />
     </div>
-  )
+  );
 }
