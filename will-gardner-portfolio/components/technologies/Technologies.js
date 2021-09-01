@@ -114,6 +114,11 @@ const Technologies = () => {
       tooltip: 'Stripe',
       enlarge: true,
     },
+    {
+      url: 'supabase',
+      tooltip: 'supabase',
+      enlarge: true,
+    }
   ]
 
   const devToolsObject = [

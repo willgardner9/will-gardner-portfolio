@@ -22,7 +22,7 @@ export default function Home() {
         <Menu />
         <HeaderText />
         <Divider text="Projects" />
-        <Text text="I love building and deploying full stack applications to create functional, user-focused tools and learn new technologies. Please see a selection of web apps I have built below. You can view each project deployed live, review the open-source code on GitHub, or read the case study to learn more about the project." />
+        <Text text="I love building and deploying full stack applications to create functional, user-focused tools and learn new technologies. You can view each project deployed live, review the open source code on GitHub, or watch a demo and read the case study to learn more about the project." />
         <Project
           projectNameText="Testably"
           projectImage="testably"
@@ -30,6 +30,14 @@ export default function Home() {
           viewLiveButtonDestination="https://testably.co/"
           viewOnGitHubButtonDestination="https://github.com/willgardner9?tab=repositories&q=testably&type=&language=&sort="
           readCaseStudyDestination="/testably"
+        />
+        <Project
+          projectNameText="bestreads"
+          projectImage="bestreads"
+          projectDescription="Bestreads is a web app that allows you to create a private list of books you want to read, books you have read, and set an annual reading challenge. I created it for my partner and I to use together - goodreads without the public social media. Bestreads is a React app with Next.js on the front end and supabase, an open source PaaS, on the back end."
+          viewLiveButtonDestination="https://bestreads.vercel.app/"
+          viewOnGitHubButtonDestination="https://github.com/willgardner9/bestreads"
+          readCaseStudyDestination="/bestreads"
         />
         <Divider text="Technologies" />
         <Text text="This is a selection of languages, frameworks, and APIs that I am comfortable with and have experience using. I love learning new technologies, too  - check out my learning roadmap at the end of the section to see what I’m planning on picking up next!" />
