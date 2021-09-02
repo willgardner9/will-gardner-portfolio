@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ReactTooltip from "react-tooltip";
+import Tooltip from "@carforyou/react-tooltip-lite";
 
 const TechnologyGroup = ({technologyGroupText, technologiesObject}) => {
   return (
@@ -9,22 +9,27 @@ const TechnologyGroup = ({technologyGroupText, technologiesObject}) => {
       </h5>
       <div className="flex flex-row mt-4 mb-4 w-95vw sm:w-full overflow-x-scroll webkit-hide-scrollbar">
         {technologiesObject.map((technology) => (
-          <div
-            key={technology.tooltip}
-            className="flex flex-col items-center justify-center mt-2 sm:mt-0 mr-8 min-w-max"
-            onMouseEnter={() => console.log("hi")}
-          >
-            <Image
-              data-tip={technology.tooltip}
-              src={`/${technology.url}.svg`}
-              width={technology.enlarge ? "80" : "30"}
-              height="30"
-              alt={`${technology.tooltip} logo`}
-            />
+          <div className="mr-8">
+            <Tooltip
+              content={technology.tooltip}
+              direction="bottom"
+              key={technology.tooltip}
+              className="text-xs text-center"
+              useDefaultStyles={true}
+              distance={15}
+            >
+              <div className="flex flex-col items-center justify-center mt-2 sm:mt-0 min-w-max">
+                <Image
+                  src={`/${technology.url}.svg`}
+                  width={technology.enlarge ? "80" : "30"}
+                  height="30"
+                  alt={`${technology.tooltip} logo`}
+                />
+              </div>
+            </Tooltip>
           </div>
         ))}
       </div>
-      <ReactTooltip place="bottom" type="dark" effect="solid" />
     </section>
   );
 };
