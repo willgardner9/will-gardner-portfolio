@@ -10,4 +10,5 @@ This is my personal portfolio showcasing my full stack development projects, cas
 
 - React.js
 - Next.js
+- Tailwind CSS
 - Continuous deployment with Vercel
