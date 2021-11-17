@@ -1,9 +1,9 @@
-const Divider = ({ text }) => {
+const Divider = ({text}) => {
   return (
-    <h3 className="mt-16 font-karla text-xl font-medium">
-      { text }
+    <h3 className="mt-16 font-karla text-xl font-medium dark:text-gray-300">
+      {text}
     </h3>
-  )
-}
+  );
+};
 
-module.exports = Divider
+module.exports = Divider;
