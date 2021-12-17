@@ -114,6 +114,11 @@ const Technologies = () => {
       enlarge: true,
     },
     {
+      url: "shopify",
+      tooltip: "Shopify",
+      enlarge: false,
+    },
+    {
       url: "supabase",
       tooltip: "supabase",
       enlarge: true,
@@ -138,9 +143,19 @@ const Technologies = () => {
 
   const deploymentToolsObject = [
     {
+      url: "aws",
+      tooltip: "AWS",
+      enlarge: true,
+    },
+    {
+      url: "pulumi",
+      tooltip: "Pulumi",
+      enlarge: true,
+    },
+    {
       url: "digital-ocean",
       tooltip: "Digital Ocean",
-      enlarge: false,
+      enlarge: true,
     },
     {
       url: "vercel",
