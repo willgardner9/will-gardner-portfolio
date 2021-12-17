@@ -9,7 +9,7 @@ export default function Contact() {
       </div>
       <div className="mt-4">
         <a
-          href="/cv.pdf"
+          href="/will-gardner-cv.pdf"
           target="_blank"
           className="font-karla text-lg font-light flex items-center outline-none rounded-lg h-14 p-3 mr-4 min-w-max focus:ring-4 ring-gray-300 active:ring-4 active:ring-gray-400 bg-gray-200 hover:bg-gray-300 first:mt-0 mt-4 sm:mt-0 dark:text-gray-200 dark:bg-gray-700
           dark:hover:bg-gray-600
