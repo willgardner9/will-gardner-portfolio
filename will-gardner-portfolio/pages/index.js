@@ -29,7 +29,7 @@ export default function Home() {
           projectNameText="Testably"
           projectImage="testably"
           projectDescription="Testably is a micro-SaaS product providing easy-to-use A/B testing tools for startups and small businesses. I developed Testably after growing frustrated in my day job about the lack of simple, affordable A/B testing solutions available for startups. Testably is built with Express and MongoDB on the back end and Vue.js with Nuxt.js on the front end."
-          viewLiveButtonDestination="https://testably.co/"
+          viewLiveButtonDestination="https://testably-co-front-end.vercel.app/"
           viewOnGitHubButtonDestination="https://github.com/willgardner9?tab=repositories&q=testably&type=&language=&sort="
           readCaseStudyDestination="/testably"
         />
