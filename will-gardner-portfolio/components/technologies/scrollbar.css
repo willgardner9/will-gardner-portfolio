@@ -7,3 +7,8 @@
   scrollbar-width: none;
   overflow-y: scroll;
 }
+
+.technology-icon {
+  min-width: fit-content;
+  margin-right: 1.5rem;
+}

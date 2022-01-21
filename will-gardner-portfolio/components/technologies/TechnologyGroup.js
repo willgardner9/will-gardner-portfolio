@@ -3,13 +3,13 @@ import Tooltip from "@carforyou/react-tooltip-lite";
 
 const TechnologyGroup = ({technologyGroupText, technologiesObject}) => {
   return (
-    <section className="flex flex-col mr-0 sm:mr-20 webkit-hide-scrollbar">
+    <section className="flex flex-col mr-0 sm:mr-20 webkit-hide-scrollbar w-full">
       <h5 className="mt-16 uppercase text-xs font-medium text-gray-500">
         {technologyGroupText}
       </h5>
-      <div className="flex flex-row mt-4 mb-4 w-95vw sm:w-full overflow-x-scroll webkit-hide-scrollbar">
+      <div className="flex flex-row mt-4 mb-4 overflow-x-scroll webkit-hide-scrollbar">
         {technologiesObject.map((technology) => (
-          <div className="mr-8">
+          <div className="technology-icon">
             <Tooltip
               content={technology.tooltip}
               direction="bottom"

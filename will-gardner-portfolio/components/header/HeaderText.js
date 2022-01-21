@@ -13,6 +13,7 @@ export default function HeaderText() {
         >
           <span className="font-medium">Motley</span>
         </a>
+        .
       </h2>
     </section>
   );
